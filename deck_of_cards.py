@@ -11,7 +11,6 @@ class Card:
 
 
 class Deck:
-
     suit_tuple = ("Hearts", "Diamonds", "Clubs", "Spades")
 
     value_tuple = ("A", "2", "3", "4", "5", "6", "7",
@@ -23,6 +22,9 @@ class Deck:
 
     def __repr__(self):
         return f"Deck of {self.count()} cards"
+
+    def __iter__(self):
+        return iter(self.deck_list)
 
     def count(self):
         return len(self.deck_list)
@@ -55,12 +57,15 @@ class Deck:
 
 my_deck = Deck()
 # print(my_deck.deck_list)
-print(my_deck.deck_list)
+# print(my_deck.deck_list)
 print(my_deck.shuffle())
-print(my_deck.deck_list)
-print(my_deck.count())
-print(my_deck.deal_card())
-print(my_deck.deal_hand(4))
+# print(my_deck.deck_list)
+# print(my_deck.count())
+# print(my_deck.deal_card())
+# print(my_deck.deal_hand(4))
+#
+# print(my_deck.count())
+# print(my_deck.deck_list)
 
-print(my_deck.count())
-print(my_deck.deck_list)
+for card in my_deck:
+    print(card)
