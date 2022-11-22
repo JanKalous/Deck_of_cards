@@ -54,18 +54,5 @@ class Deck:
     def deal_hand(self, dnum):
         self._deal(dnum)
 
+deck = Deck()
 
-my_deck = Deck()
-# print(my_deck.deck_list)
-# print(my_deck.deck_list)
-print(my_deck.shuffle())
-# print(my_deck.deck_list)
-# print(my_deck.count())
-# print(my_deck.deal_card())
-# print(my_deck.deal_hand(4))
-#
-# print(my_deck.count())
-# print(my_deck.deck_list)
-
-for card in my_deck:
-    print(card)
